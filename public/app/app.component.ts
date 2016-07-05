@@ -1,9 +1,10 @@
 import { Component }          from '@angular/core';
 import { ROUTER_DIRECTIVES }  from '@angular/router';
-import { HeroService }        from './hero.service';
-import { DashboardComponent } from './dashboard.component';
-import { HeroesComponent } from './heroes.component';
-import { HeroDetailComponent } from './hero-detail.component';
+import { HeroService }        from './services/hero.service';
+
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './heroes/hero-detail.component';
 
 @Component({
   selector: 'my-app',
@@ -15,7 +16,7 @@ import { HeroDetailComponent } from './hero-detail.component';
     </nav>
     <router-outlet></router-outlet>
   `,
-  styleUrls: ['app/app.component.css'],
+  styleUrls: ['./app.component.css'],
   directives: [ROUTER_DIRECTIVES],
   precompile: [DashboardComponent, HeroesComponent, HeroDetailComponent],
   providers: [
